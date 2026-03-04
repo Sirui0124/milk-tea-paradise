@@ -1,0 +1,83 @@
+.wrap { padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+
+.header { display: flex; justify-content: space-between; align-items: center; }
+.title  { font-size: 16px; font-weight: 700; color: var(--brown); }
+.hint   { font-size: 13px; color: var(--text-light); }
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 12px;
+}
+.emptyIcon { font-size: 48px; }
+.emptyText { font-size: 16px; color: var(--text-light); font-weight: 600; }
+.emptyHint { font-size: 12px; color: var(--border); }
+
+.list { display: flex; flex-direction: column; gap: 10px; }
+
+.card {
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.3s ease;
+}
+.card.urgent { border-color: var(--danger); animation: shake 0.5s ease-in-out; }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.orderEmoji { font-size: 36px; flex-shrink: 0; }
+.orderInfo  { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.orderName  { font-size: 15px; font-weight: 700; color: var(--text); }
+.orderReward { font-size: 12px; color: var(--text-light); }
+
+.timer {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--success);
+  flex-shrink: 0;
+  min-width: 40px;
+  text-align: right;
+}
+.timerUrgent { color: var(--danger); animation: blink 0.6s ease-in-out infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.fulfillBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  background: var(--border);
+  color: var(--text-light);
+  cursor: default;
+  transition: all 0.2s ease;
+}
+.fulfillBtn.canFulfill {
+  background: var(--pink);
+  color: var(--brown);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 183, 197, 0.4);
+}
+.fulfillBtn.canFulfill:active { transform: scale(0.97); }

@@ -1,0 +1,78 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px var(--shadow);
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.lvLabel { font-size: 10px; color: var(--text-light); font-weight: 600; }
+.lvNum   { font-size: 18px; font-weight: 900; color: var(--brown); }
+
+.expBar {
+  width: 40px;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.expFill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.stamina {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.staminaBar {
+  flex: 1;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.staminaFill {
+  height: 100%;
+  background: var(--mint);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.staminaText {
+  font-size: 11px;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.gold {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.goldNum {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brown);
+}

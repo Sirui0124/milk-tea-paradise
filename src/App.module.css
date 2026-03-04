@@ -1,0 +1,128 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mainTabs {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.mainTab {
+  flex: 1;
+  padding: 10px 4px;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.mainTab.mainTabActive {
+  color: var(--brown);
+}
+
+.mainTab.mainTabActive::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: var(--pink);
+  border-radius: 2px 2px 0 0;
+}
+
+.badge {
+  background: var(--danger);
+  color: white;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  line-height: 1.4;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.placeholder div:first-child { font-size: 48px; }
+.placeholder div:nth-child(2) { font-size: 18px; font-weight: 600; color: var(--brown); }
+
+.statsCard, .settingsCard {
+  margin: 12px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.statsTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brown);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.statRow span:last-child { font-weight: 700; color: var(--brown); }
+
+.dangerBtn {
+  padding: 12px;
+  border: 2px solid var(--danger);
+  border-radius: 12px;
+  background: none;
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.15s ease;
+}
+.dangerBtn:active { background: var(--danger); color: white; }
